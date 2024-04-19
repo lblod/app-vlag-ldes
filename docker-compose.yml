@@ -52,7 +52,7 @@ services:
   consumer:
     image: redpencil/ldes-consumer
     environment:
-      CRON_PATTERN: "*/60 * * * * *"
+      CRON_PATTERN: "*/10 * * * * *"
       LDES_STREAM: https://dev-vlag.roadsigns.lblod.info/ldes-mow-register
       LDES_ENDPOINT_VIEW: https://dev-vlag.roadsigns.lblod.info/ldes-mow-register/1
       MU_SPARQL_ENDPOINT: "http://database:8890/sparql"
