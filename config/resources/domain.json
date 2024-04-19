@@ -1,0 +1,42 @@
+{
+  "version": "0.1",
+  "prefixes": {},
+  "resources": {
+    "road-sign-concepts": {
+      "class": "mobiliteit:Verkeersbordconcept",
+      "attributes": {
+        "image": {
+          "type": "string",
+          "predicate": "mobiliteit:grafischeWeergave"
+        },
+        "label": {
+          "type": "string",
+          "predicate": "skos:prefLabel"
+        }
+      },
+      "relationships": {},
+      "new-resource-base": "http://data.lblod.info/traffic-sign-concepts/"
+    },
+    "geopoints": {
+      "class": "geo:Point",
+      "attributes": {
+        "latitude": {
+          "type": "float",
+          "predicate": "geo:lat"
+        },
+        "longitude": {
+          "type": "float",
+          "predicate": "geo:long"
+        }
+      },
+      "relationships": {
+        "signs": {
+          "predicate": "ext:hasSign",
+          "target": "road-sign-concepts",
+          "cardinality": "many"
+        }
+      },
+      "new-resource-base": "http://data.lblod.info/geo-points/"
+    }
+  }
+}
